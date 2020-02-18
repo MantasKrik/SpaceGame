@@ -5,27 +5,56 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 10.0f;
-    private float translation;
-    private float straffe;
+    private CharacterController controller;
+    public float gravity = -10f;
 
-    // Use this for initialization
-    void Start () {
-        // turn off the cursor
+    Vector3 velocity;
+    public float jumpHeight = 2f;
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
+
+    void Start()
+    {
         Cursor.lockState = CursorLockMode.Locked;
-	}    
-	
-	// Update is called once per frame
-	void Update () {
-        // Input.GetAxis() is used to get the user's input
-        // You can furthor set it on Unity. (Edit, Project Settings, Input)
-        translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        controller = GetComponent<CharacterController>();
 
-         
+    }
 
-        if (Input.GetKeyDown("escape")) {
-            // turn on the cursor
+    void Update()
+    {
+        float forward = Input.GetAxis("Vertical");
+        float right = Input.GetAxis("Horizontal");
+
+        Vector3 movementDir = transform.forward * forward + transform.right * right;
+        
+
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2;
+        }
+
+        if (Input.GetButtonDown("Jump") && isGrounded())
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
+        controller.Move(movementDir * speed * Time.deltaTime);
+
+        if (Input.GetKeyDown("escape"))
+        {
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+    private bool isGrounded()
+    {
+        if (controller.isGrounded == true) return true;
+        return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+    }
+
 }
