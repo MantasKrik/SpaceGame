@@ -8,7 +8,7 @@ public class GroundCheck : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Ground")
+        if(collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             player.isGrounded = true;
         }
