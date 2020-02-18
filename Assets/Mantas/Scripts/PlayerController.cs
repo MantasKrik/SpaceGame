@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public Light flashlight;
     public bool flashlightIsOn;
 
+    public float score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
