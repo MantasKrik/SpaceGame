@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimplePickUpMovement : MonoBehaviour
 {
-
+    
     //adjust this to change speed
     float speed = 1f;
     //adjust this to change how high it goes

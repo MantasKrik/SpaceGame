@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.1f;
     public LayerMask groundMask;
+    public Animator CharacterAnim;
+    public Animator RailgunAnim;
 
 
     void Start()
@@ -29,9 +31,9 @@ public class Movement : MonoBehaviour
     {
         float forward = Input.GetAxis("Vertical");
         float right = Input.GetAxis("Horizontal");
+        
 
         Vector3 movementDir = transform.forward * forward + transform.right * right;
-
 
         if (controller.isGrounded && velocity.y < 0)
         {
@@ -57,6 +59,12 @@ public class Movement : MonoBehaviour
                 velocity.y = -SpeedOutsideOfGravity;
             }
         }
+
+        //movementDir=Vector3.Normalize(movementDir);
+
+        CharacterAnim.SetFloat("Speed", forward);
+        RailgunAnim.SetBool("Run", movementDir != Vector3.zero );
+
 
         controller.Move(velocity * Time.deltaTime);
         controller.Move(movementDir * speed * Time.deltaTime);
