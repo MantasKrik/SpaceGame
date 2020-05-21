@@ -22366,37 +22366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
         type: 3}
-      propertyPath: m_Range
-      value: 31.63564
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
-      propertyPath: m_SpotAngle
-      value: 65.98554
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.8306337
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9622642
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.9520775
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
       propertyPath: m_Intensity
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135852213198275889, guid: 0c9323cde11ac6f4c80bf96265f7e385,
-        type: 3}
-      propertyPath: m_Shadows.m_NearPlane
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
