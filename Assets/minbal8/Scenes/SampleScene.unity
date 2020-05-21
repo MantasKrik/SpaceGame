@@ -122,56 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &149511704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 149511705}
-  - component: {fileID: 149511706}
-  m_Layer: 8
-  m_Name: Trees1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &149511705
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149511704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680060233}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &149511706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149511704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetRadius: 54
-  characterHeight: 0
-  planetPosition: {x: 0, y: 0, z: 0}
-  spawnCharacter: {fileID: 100000, guid: b6972eaa35c2e574e8ab5083a59d8459, type: 3}
-  multiplier: 1
-  RandomScale: 1
-  RandomRotation: 0
 --- !u!1 &160267250
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 4362237123123957160, guid: 9f72e70a7a9bdfa41ba547e6712be8c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4362237123123957160, guid: 9f72e70a7a9bdfa41ba547e6712be8c5,
         type: 3}
@@ -585,56 +535,6 @@ PrefabInstance:
     - {fileID: 4362237123123957162, guid: 9f72e70a7a9bdfa41ba547e6712be8c5, type: 3}
     - {fileID: 6711119215891365475, guid: 9f72e70a7a9bdfa41ba547e6712be8c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f72e70a7a9bdfa41ba547e6712be8c5, type: 3}
---- !u!1 &551390619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551390620}
-  - component: {fileID: 551390621}
-  m_Layer: 8
-  m_Name: Trees3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &551390620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551390619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680060233}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &551390621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551390619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetRadius: 54
-  characterHeight: 0
-  planetPosition: {x: 0, y: 0, z: 0}
-  spawnCharacter: {fileID: 100004, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
-  multiplier: 1
-  RandomScale: 0
-  RandomRotation: 0
 --- !u!1 &564964381
 GameObject:
   m_ObjectHideFlags: 0
@@ -9052,65 +8952,9 @@ Transform:
   m_Father: {fileID: 884387898}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 45, z: 0}
---- !u!1 &664414787
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 664414788}
-  - component: {fileID: 664414789}
-  m_Layer: 8
-  m_Name: Trees2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &664414788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664414787}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680060233}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &664414789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664414787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetRadius: 54
-  characterHeight: 0
-  planetPosition: {x: 0, y: 0, z: 0}
-  spawnCharacter: {fileID: 100008, guid: 5c2ecb53217ee6d47845944d5e81b5a6, type: 3}
-  multiplier: 1
-  RandomScale: 0
-  RandomRotation: 0
 --- !u!1 &680060232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2076da79dd9237d49b080e8ba3d214d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1959678782}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &680060233 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2076da79dd9237d49b080e8ba3d214d7,
     type: 3}
   m_PrefabInstance: {fileID: 1959678782}
   m_PrefabAsset: {fileID: 0}
@@ -9139,6 +8983,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.009999886
   m_Center: {x: -0.0000000037252903, y: -0.000000010244548, z: 0.0000000013969839}
+--- !u!114 &680060238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680060232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetRadius: 109
+  RandomSeed: 0
+  spawnItems:
+  - ammount: 100
+    spawnObject: {fileID: 100000, guid: a2d308598386f4a0797f87a4b95b9dd1, type: 3}
+    randomScale: 1
+    randomRotation: 1
+  - ammount: 100
+    spawnObject: {fileID: 100000, guid: 7b5f2f9ea19c74c659ab8ac969280fb2, type: 3}
+    randomScale: 1
+    randomRotation: 1
+  - ammount: 100
+    spawnObject: {fileID: 100000, guid: 24be8e1643b8a474fbb57fcda8a1c454, type: 3}
+    randomScale: 1
+    randomRotation: 1
+  - ammount: 100
+    spawnObject: {fileID: 100000, guid: b6972eaa35c2e574e8ab5083a59d8459, type: 3}
+    randomScale: 0
+    randomRotation: 0
 --- !u!1 &769626685
 GameObject:
   m_ObjectHideFlags: 0
@@ -9765,7 +9640,7 @@ Transform:
   - {fileID: 1647901651}
   - {fileID: 1541798703}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1330810135 stripped
 Transform:
@@ -10134,57 +10009,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1955033318}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1557406781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1557406782}
-  - component: {fileID: 1557406783}
-  m_Layer: 8
-  m_Name: Grass
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1557406782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557406781}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680060233}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1557406783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557406781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetRadius: 54
-  characterHeight: 0
-  planetPosition: {x: 0, y: 0, z: 0}
-  spawnCharacter: {fileID: 2095689877783147465, guid: 91b317ea643d0c244918bcf2f38c16d1,
-    type: 3}
-  multiplier: 100
-  RandomScale: 1
-  RandomRotation: 0
 --- !u!1001 &1567454749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10236,7 +10060,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9385eb1641bacc44ba9d0bc6d48f333b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9385eb1641bacc44ba9d0bc6d48f333b,
         type: 3}
@@ -14532,7 +14356,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1676373328
 PrefabInstance:
@@ -14805,56 +14629,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 893015972198416977}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1944113102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1944113103}
-  - component: {fileID: 1944113104}
-  m_Layer: 8
-  m_Name: SpawnRocks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1944113103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944113102}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 680060233}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1944113104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944113102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd007a0e350e51342a424dfa4e2bc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetRadius: 54
-  characterHeight: 0
-  planetPosition: {x: 0, y: 0, z: 0}
-  spawnCharacter: {fileID: 100000, guid: a2d308598386f4a0797f87a4b95b9dd1, type: 3}
-  multiplier: 1
-  RandomScale: 1
-  RandomRotation: 1
 --- !u!4 &1948215183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 623309260280862011, guid: ed154f52d8550f840b0143ca85dc715e,
