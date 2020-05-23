@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         if (!GravityEnabled)
         {
             gravityVector = Vector3.zero;
+            return;
         }
         if (Grounded && jumped <= 0)
         {
@@ -87,6 +88,8 @@ public class PlayerMovement : MonoBehaviour
         }
         gravityVector -= gravitySize * transform.up * Time.fixedDeltaTime;
 
+        Debug.Log(gravityVector);
+
     }
 
     private float CalculateJumpSpeed(float h, float gravity)
@@ -94,9 +97,9 @@ public class PlayerMovement : MonoBehaviour
         return Mathf.Sqrt(2 * h * gravity);
     }
 
-    public void LaunchIntoAir()
+    public void LaunchIntoAir(float height)
     {
-        gravityVector += transform.up * CalculateJumpSpeed(jumpHeight, gravitySize);
+        gravityVector += transform.up * CalculateJumpSpeed(height, gravitySize);
     }
 
     private void Jump()
@@ -195,10 +198,17 @@ public class PlayerMovement : MonoBehaviour
         {
             jumped -= Time.fixedDeltaTime;
         }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LaunchIntoAir(20);
+            Debug.Log("Launch");
+        }
         Move();
 
         if (!Planet)
             RotateTowards();
+
+
     }
 
 
