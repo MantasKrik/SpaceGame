@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4362237123123957160}
   - component: {fileID: 4362237123123957167}
-  - component: {fileID: 6711119215891365475}
   m_Layer: 0
   m_Name: PlanetCharacter
   m_TagString: Player
@@ -49,19 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 0}
   count: 0
---- !u!114 &6711119215891365475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4362237123123957163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203376084dc23034d9f4b019e11cb3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!1 &4362237123302301196
 GameObject:
   m_ObjectHideFlags: 0
