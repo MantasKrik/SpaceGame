@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator RailgunAnim;
     private PlanetScript Planet;
 
+    private Vector3 velocityChange;
     private float jumped = 1f;
     void Start()
     {
@@ -31,13 +32,30 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Move();
         updateAnimator();
+        if (jumped > 0)
+        {
+            jumped -= Time.deltaTime;
+        }
 
+    }
+
+    void FixedUpdate()
+    {
+        if (jumped > 0)
+        {
+            jumped -= Time.fixedDeltaTime;
+        }
+
+        rBody.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        if (!Planet)
+            RotateTowards();
     }
 
     private void updateAnimator()
     {
-
         CharacterAnim.SetFloat("Speed", targetVelocity.magnitude);
         RailgunAnim.SetBool("Run", targetVelocity != Vector3.zero);
 
@@ -49,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     private void Move()
     {
         float forward = Input.GetAxis("Vertical");
@@ -58,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         targetVelocity *= moveSpeed;
 
         Vector3 velocity = rBody.velocity;
-        Vector3 velocityChange = (targetVelocity - velocity);
+        velocityChange = (targetVelocity - velocity);
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = Mathf.Clamp(velocityChange.y, -maxVelocityChange, maxVelocityChange);
@@ -66,8 +85,6 @@ public class PlayerMovement : MonoBehaviour
         calculateGravity();
         Jump();
         velocityChange += gravityVector;
-        rBody.AddForce(velocityChange, ForceMode.VelocityChange);
-
     }
 
     private void calculateGravity()
@@ -192,24 +209,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void FixedUpdate()
-    {
-        if (jumped > 0)
-        {
-            jumped -= Time.fixedDeltaTime;
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LaunchIntoAir(20);
-            Debug.Log("Launch");
-        }
-        Move();
 
-        if (!Planet)
-            RotateTowards();
-
-
-    }
 
 
 
