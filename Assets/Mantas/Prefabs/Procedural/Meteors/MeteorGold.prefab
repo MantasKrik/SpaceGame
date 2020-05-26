@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24139a1519f8c014c8271a64e1c385f0, type: 2}
+    - target: {fileID: 3545952324438053136, guid: 4094b86f01e18bc459729d2629856627,
+        type: 3}
+      propertyPath: meteorType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3801714723244423448, guid: 4094b86f01e18bc459729d2629856627,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -90,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 7957011494318413247, guid: 4094b86f01e18bc459729d2629856627,
         type: 3}
       propertyPath: m_Name
-      value: Meteor
+      value: MeteorGold
       objectReference: {fileID: 0}
     - target: {fileID: 8185115223438438521, guid: 4094b86f01e18bc459729d2629856627,
         type: 3}

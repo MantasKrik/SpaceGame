@@ -9,6 +9,7 @@ public class Meteor : MonoBehaviour
     public Rigidbody rb;
     public Transform resourcePrefab;
     public int resourceCount = 1;
+    public MeteorSettings.MeteorType meteorType;
 
 
     void Start()

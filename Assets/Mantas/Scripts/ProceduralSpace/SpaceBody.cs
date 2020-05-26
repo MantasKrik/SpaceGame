@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpaceBody
 {
     public GameObject spaceObject;
+    
     public Vector3 position;
     public Vector3 scale;
     public Quaternion quaternion;

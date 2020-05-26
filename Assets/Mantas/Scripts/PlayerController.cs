@@ -149,7 +149,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddRelativeForce(inputMovement.normalized * movementSpeed * rb.mass * Time.fixedDeltaTime, ForceMode.Force);
         }
-        //rb.MovePosition(transform.position + (inputMovement.normalized * movementSpeed * rb.mass * Time.fixedDeltaTime));
     }
 
     private void GetMovementInput()
@@ -167,14 +166,6 @@ public class PlayerController : MonoBehaviour
             
         weaponAnimator.SetBool("isGrounded", isGrounded);
     }
-    //private void GetItemInput()
-    //{
-    //    // Flashlight toggle
-    //    if (Input.GetKeyDown(KeyCode.F))
-    //    {
-    //        flashlightIsOn = !flashlightIsOn;
-    //    }
-    //}
 
     public void Eat(float restoreHealth, float restoreFood)
     {

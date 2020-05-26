@@ -83,14 +83,14 @@ public class GameManager : MonoBehaviour
                 spaceBody.scale = scale;
             }
 
-            spaceTile.spaceObjects.Add(spaceBody);
+            spaceTile.spaceBodies.Add(spaceBody);
         }
     }
 
     void GenerateTile(Vector3 pos, int spaceObjCount)
     {
         SpaceTile tile = new SpaceTile();
-        Debug.Log(tile.spaceObjects);
+        Debug.Log(tile.spaceBodies);
 
         tile.ID = numberOfTiles++;
         tile.position = pos;
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
     void SpawnSpaceObjects(SpaceTile tile, GameObject tileObj)
     {
 
-        foreach (var obj in tile.spaceObjects)
+        foreach (var obj in tile.spaceBodies)
         {
             Transform t = Instantiate(obj.spaceObject, obj.position, obj.quaternion, tileObj.transform).GetComponent<Transform>();
             t.localScale = obj.scale;
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
                             }
                             else
                             {
-                                GenerateTile(nextTile, Random.Range(10, 30));
+                                GenerateTile(nextTile, Random.Range(0, 3));
                                 SpawnTile(nextTile);
                                 activeSpaceTiles.Add(nextTile);
                             }
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
     private void DespawnTile(Vector3 pos)
     {
 
-        //UpdateSpaceBodyList(pos); TRYING TO ACCESS DESTROYED GAMEOBJECT on line 118 (Transform t)
+        UpdateSpaceBodyList(pos); //TRYING TO ACCESS DESTROYED GAMEOBJECT on line 118 (Transform t)
         Destroy(spaceTileObjects[pos], 0.1f);
 
         spaceTileObjects.Remove(pos);
@@ -187,16 +187,22 @@ public class GameManager : MonoBehaviour
 
     private void UpdateSpaceBodyList(Vector3 tilePos)
     {
-        spaceTiles[tilePos].spaceObjects.Clear();
+        spaceTiles[tilePos].spaceBodies.Clear();
         foreach (Transform childT in spaceTileObjects[tilePos].transform)
         {
             SpaceBody newBody = new SpaceBody();
-            newBody.spaceObject = childT.gameObject;
+
+            if (childT.gameObject.tag == "Meteor")
+            {
+                MeteorSettings.MeteorType meteorType = childT.GetComponent<Meteor>().meteorType;
+                newBody.spaceObject = MeteorSettings.instance.meteorPrefabs[(int)(meteorType)];
+            }
+
             newBody.position = childT.position;
             newBody.quaternion = childT.localRotation;
             newBody.scale = childT.localScale;
 
-            spaceTiles[tilePos].spaceObjects.Add(newBody);
+            spaceTiles[tilePos].spaceBodies.Add(newBody);
         }
     }
 
